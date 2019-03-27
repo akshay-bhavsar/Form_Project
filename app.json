@@ -1,0 +1,111 @@
+[
+	{
+		"title":"Personal Info",
+		"topics":{
+				"project Name":"",
+				"Customer":"",
+				"Sales Office":"",
+				"Business Unit":"",
+				"Sales Leader":"",
+				"Proposal Load":"",
+				"Solution Architect":"",
+				"Plot Plan Size":{
+					"High":"1.5",
+					"Medium":"1.2",
+					"Low":"1"
+				},
+				"Plot Plan Complexity":{
+					"Hight":"4",
+					"Medium":"3",
+					"Low":"2"
+				}
+			}
+	},
+	{
+		"title":"Deliverables",
+		"topics":{
+			"Proposal Requsition Form":"2",
+			"Techical Proposal":"4",
+			"System Architect":"2",
+			"Bill Of Material":"4",
+			"Project Execution Hours and Expenses":"5",
+			"Passive RF Survey Report":"2",
+			"Active RF Survey Report":"1",
+			"RF Study - Heat Map":"5",
+			"RF Study - AWS Snap On":"4",
+			"Project Schedule and Plan":"2",
+			"Others":"3"
+		}
+	},
+	{
+		"title":"Solution Configration",
+		"topics":[
+			{
+				"Mobile Worker":{
+					"Digital Rounds":"2",
+					"Digital Doc box":"3",
+					"Work permit & LOTO":"4",
+					"Remove/Smart Loop Check":"5",
+					"Quick Commissioning":"6",
+					"Connected Digital Worker - Skill Center - Voice & Video Calling Support":"3"
+				}
+			},
+			{
+				"Location Awareness":{
+					"Evaculation Monitoring System":"3",
+					"Injury Alerting":"4",
+					"Hazardous Area Access Control":"5"
+				}
+			},
+			{
+				"Real Time Location Tracking":{
+					"Real Time People/Asset tracing":"4",
+					"Evaculation Monitoring System":"5",
+					"Injury Alerting":"4",
+					"Hazardous Area Access Control":"2",
+					"Equipment utilization":"2",
+					"Vahicle Tracking (GPS)":"3"
+				}
+			},
+			{
+				"SmartWearables":{
+					"Handfree VoIP":"4",
+					"handfree Video Calling":"5",
+					"Live Streaming of data to control room":"2",
+					"Viewing Documents from Document server":"3"
+				}
+			},
+			{
+				"Wireless CCTV Camera":{
+					"Surveillance":"2",
+					"Motion Detecting":"4",
+					"Facial Detection":"5",
+					"Vehicle Number Plate Detection":"6",
+					"Perimeter Detection":"3",
+					"Thermal Detection":"1",
+					"Night Vision Detection":"3",
+					"Restricted Area Access Control":"5"
+				}
+			},
+			{
+				"Smart Phone":{
+					"VoIP":"4",
+					"Video Calling":"5",
+					"Work Permit":"6"
+				}
+			},
+			{
+				"WFN":{
+					"P & ID Study":"4",
+					"Geneerate Instrument index-(Wireless+Wired)":"0",
+					"Wireless Instrument Identification from Instruments Index":"5",
+					"Value Analysis - Basic Of Design Tool":"2",
+					"value Analysis - Juction Box Reuirement":"3",
+					"3D Model Review":"4",
+					"2D Model Review":"5",
+					"AMS Snap on":"7"
+				}
+			}
+		]
+	}
+]

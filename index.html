@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Project Evaluation</title>
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
+    <script src="core/jquery.min.js" type="text/javascript"></script>
+    <script src="core/script.js" type="text/javascript"></script>
+    <script type="text/javascript" src="core/underscore.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <form method="post" onsubmit="return false;" onreset="alert('Reset Data');return true" autocomplete="off">
+            <fieldset class="field_one">
+                <legend class="title">Personal information:</legend>
+                <label> project Name:</label>
+                <input type="text" name="projecttname" required>
+                <br>
+                <br>
+                <label> Customer:</label>
+                <input type="text" name="customer" required>
+                <br>
+                <br>
+                <label> Sales Office:</label>
+                <input type="text" name="salesoffice" required>
+                <br>
+                <br>
+                <label> Business Unit:</label>
+                <input type="text" name="customer" required>
+                <br>
+                <br>
+                <label> Sales Leader:</label>
+                <input type="text" name="salesleader" required>
+                <br>
+                <br>
+                <label> Proposal Load:</label>
+                <input type="text" name="proposalload" required>
+                <br>
+                <br>
+                <label> Solution Architect:</label>
+                <input type="text" name="solutionarchitect" required>
+                <br>
+                <br>
+                <label> Plot Plan Size:</label>
+                <select id="Plot_Plan_Size" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="1.5">High</option>
+                    <option value="1.2">Medium</option>
+                    <option value="1">Low</option>
+                </select>
+                <br>
+                <br>
+                <label> Plot Plan Complexity:</label>
+                <select id="Plot_Plan_Complexity" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="4">High</option>
+                    <option value="3">Medium</option>
+                    <option value="2">Low</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="field_two">
+            </fieldset>
+
+            <fieldset class="field_three">
+            </fieldset>
+
+            <fieldset>
+                <legend class="title">Result</legend>
+                <input type="submit" value="Submit" class="btn submitBtn">&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="Reset" class="btn">
+                <div class="showResult"></div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

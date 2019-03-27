@@ -1,0 +1,27 @@
+form{
+    width:60%;
+}
+
+.title{
+	font-weight: bold;
+	font-size: x-large;
+}
+
+.showResult{
+    float: right;
+    width: 25%;
+    min-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    border: 1px solid;
+    padding: 1%;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.btn{
+	padding: 1%;
+    font-weight: bolder;
+    width: 10%;
+}
