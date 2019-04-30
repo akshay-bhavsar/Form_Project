@@ -89,6 +89,7 @@ $(window).on("load", function() {
     })
 
     $('.resetBtn').on("click", function() {
+        $('.showResult').html('');
         $('select').removeAttr('disabled');
         $('input').removeAttr('disabled');
     })
