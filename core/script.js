@@ -1,5 +1,3 @@
-var jsonObj = [];
-
 $(window).on("load", function() {
 
     var test = $.getJSON("./app.json", function(data) {
