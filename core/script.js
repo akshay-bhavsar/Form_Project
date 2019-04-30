@@ -10,7 +10,7 @@ $(window).on("load", function() {
         var index = 0;
 
         _.each(data[1].topics, function(val, key) {
-            str2 += '<label> ' + key + '</label> <input type="radio" name="option' + index + '" value="' + val + '" required> Yes <input type="radio" name="option' + index + '" value="0" required> No<br><br>';
+            str2 += '<label> <b>' + key + '</b> </label> <input type="radio" name="option' + index + '" value="' + val + '" required> Yes <input type="radio" name="option' + index + '" value="0" required> No<br><br>';
             index++;
         });
 
@@ -21,7 +21,7 @@ $(window).on("load", function() {
         str3 += '<legend class="title">' + data[2].title + '</legend>';
 
         for (var i = 0; i < data[2].topics.length; i++) {
-            str3 += '<label> ' + _.keys(data[2].topics[i])[0] + ':</label>  <select id="solution_' + i + '" required> ';
+            str3 += '<label> <b>' + _.keys(data[2].topics[i])[0] + ':</b></label> <br/>  <select  required  id="solution_' + i + '" multiple="multiple"> ';
             str3 += '<option disabled selected value> -- select an option -- </option>';
 
             _.each(data[2].topics[i], function(item) {
@@ -38,35 +38,37 @@ $(window).on("load", function() {
     });
 
     $('.submitBtn').on("click", function() {
-        var isFilled = true;
-        var isChecked = true;
-        var isSelected = true;
+        var isInputBoxFilled = true;
+        var isRadioBtnseleced = true;
+        var isDropDownSelected = true;
 
         _.each($('.field_one').find("input"), function(item) {
-            if ($(item).val() == "") {
-                isFilled = false;
+            if ($(item).val() == "" && $(item).attr('required')) {
+                isInputBoxFilled = false;
             }
         });
 
         if ($('.field_two').find('input[type="radio"]:checked').length != $('.field_two').find("input").length / 2) {
-            isChecked = false;
+            isRadioBtnseleced = false;
         }
 
         $("select").each(function() {
             var element = $(this);
-            if (element.val() == null) {
-                isSelected = false;
+            if (element.val() == null || element.val().length == 0) {
+                isDropDownSelected = false;
             }
         });
 
-        if (isFilled && isChecked && isSelected) {
+        if (isInputBoxFilled && isRadioBtnseleced && isDropDownSelected) {
             var estimatedHours = 0;
             var plotPlanSize = $('#Plot_Plan_Size option:selected').val();
             var plotPlanComplexity = $('#Plot_Plan_Complexity option:selected').val();
             var solutionConfigHours = 0;
 
             _.each($('.field_three').find('select'), function(item) {
-                solutionConfigHours += Number($(item).val())
+                $.each($(item).val(), function() {
+                    solutionConfigHours += Number(this);
+                })
             });
 
             var deliverablesHours = 0;
@@ -76,12 +78,18 @@ $(window).on("load", function() {
 
             $('select').attr('disabled', 'disabled');
             $('input').attr('disabled', 'disabled');
-
+            $('input[type="reset"]').removeAttr('disabled');
             estimatedHours = Math.round(plotPlanComplexity * plotPlanSize * (deliverablesHours + solutionConfigHours));
 
             $('.showResult').text(estimatedHours);
+
         } else {
             return;
         }
+    })
+
+    $('.resetBtn').on("click", function() {
+        $('select').removeAttr('disabled');
+        $('input').removeAttr('disabled');
     })
 })
