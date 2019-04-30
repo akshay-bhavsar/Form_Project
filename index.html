@@ -14,35 +14,35 @@
         <form method="post" onsubmit="return false;" onreset="alert('Reset Data');return true" autocomplete="off">
             <fieldset class="field_one">
                 <legend class="title">Personal information:</legend>
-                <label> project Name:</label>
+                <label><b> project Name: </b></label>
                 <input type="text" name="projecttname" required>
                 <br>
                 <br>
-                <label> Customer:</label>
+                <label><b> Customer:</b></label>
                 <input type="text" name="customer" required>
                 <br>
                 <br>
-                <label> Sales Office:</label>
-                <input type="text" name="salesoffice" required>
+                <label><b> Sales Office:</b></label>
+                <input type="text" name="salesoffice" >
                 <br>
                 <br>
-                <label> Business Unit:</label>
-                <input type="text" name="customer" required>
+                <label><b> Business Unit:</b></label>
+                <input type="text" name="customer" >
                 <br>
                 <br>
-                <label> Sales Leader:</label>
-                <input type="text" name="salesleader" required>
+                <label><b> Sales Leader:</b></label>
+                <input type="text" name="salesleader" >
                 <br>
                 <br>
-                <label> Proposal Load:</label>
-                <input type="text" name="proposalload" required>
+                <label><b> Proposal Load:</b></label>
+                <input type="text" name="proposalload" >
                 <br>
                 <br>
-                <label> Solution Architect:</label>
-                <input type="text" name="solutionarchitect" required>
+                <label><b> Solution Architect:</b></label>
+                <input type="text" name="solutionarchitect" >
                 <br>
                 <br>
-                <label> Plot Plan Size:</label>
+                <label><b> Plot Plan Size:</b></label>
                 <select id="Plot_Plan_Size" required>
                     <option disabled selected value> -- select an option -- </option>
                     <option value="1.5">High</option>
@@ -51,7 +51,7 @@
                 </select>
                 <br>
                 <br>
-                <label> Plot Plan Complexity:</label>
+                <label><b> Plot Plan Complexity:</b></label>
                 <select id="Plot_Plan_Complexity" required>
                     <option disabled selected value> -- select an option -- </option>
                     <option value="4">High</option>
@@ -64,12 +64,13 @@
             </fieldset>
 
             <fieldset class="field_three">
+                <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
             </fieldset>
 
             <fieldset>
                 <legend class="title">Result</legend>
                 <input type="submit" value="Submit" class="btn submitBtn">&nbsp;&nbsp;&nbsp;
-                <input type="reset" value="Reset" class="btn">
+                <input type="reset" value="Reset" class="btn resetBtn">
                 <div class="showResult"></div>
             </fieldset>
         </form>
@@ -77,12 +78,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
